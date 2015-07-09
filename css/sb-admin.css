@@ -1,0 +1,324 @@
+/* 
+Author: Start Bootstrap - http://startbootstrap.com
+'SB Admin' HTML Template by Start Bootstrap
+
+All Start Bootstrap themes are licensed under Apache 2.0. 
+For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap.com!
+*/
+
+/* ATTN: This is mobile first CSS - to update 786px and up screen width use the media query near the bottom of the document! */
+
+/* Global Styles */
+
+body {
+    margin-top: 50px;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 5px 15px;
+}
+
+/* Nav Messages */
+
+.messages-dropdown .dropdown-menu .message-preview .avatar,
+.messages-dropdown .dropdown-menu .message-preview .name,
+.messages-dropdown .dropdown-menu .message-preview .message,
+.messages-dropdown .dropdown-menu .message-preview .time {
+    display: block;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .avatar {
+    float: left;
+    margin-right: 15px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .name {
+    font-weight: bold;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .message {
+    font-size: 12px;
+}
+
+.messages-dropdown .dropdown-menu .message-preview .time {
+    font-size: 12px;
+}
+
+
+/* Nav Announcements */
+
+.announcement-heading {
+    font-size: 50px;
+    margin: 0;
+}
+
+.announcement-text {
+    margin: 0;
+}
+
+/* Table Headers */
+
+table.tablesorter thead {
+    cursor: pointer;
+}
+
+table.tablesorter thead tr th:hover {
+    background-color: #f5f5f5;
+}
+
+.td-center td{ text-align:center;}
+/*.table-design tr th{ background:#3dc490; color:#fff; border:0px !important; text-transform:uppercase;}
+.table-design tr th:hover{ background-color:#009966 !important;}*/
+.table-design .fa-check{ color:#3dc490 !important;}
+.table-design td .fa{ font-size:16px; color:#777777;}
+.table-design td{ vertical-align:middle !important;}
+.table-design td a:hover .fa{ color:#3dc490;}
+.table-design .small{ font-size:11px !important;}
+table .fa-user{color:#42c874 !important;}
+table .fa-user.inactive{ color:#dbdbdb !important;}
+.mt-10{ margin-top:10px;}
+.ml-10{ margin-left:10px;}
+.panel-sub-heading{ border-bottom:1px solid #ccc; padding-bottom:10px; margin-bottom:20px}
+.tooltip *{ text-align:left !important;}
+.dataTables_filter{ text-align:right;}
+.dashboard-panel h3{ font-size:14px; text-transform:uppercase; color:#555; font-weight:bold;}
+.dashboard-panel h3 a{ color:#555;} 
+.dashboard-panel a{ color:#999;}
+th.edit-category .fa{ display:none;}
+th.edit-category:hover .fa{ display:inline-block;}
+.add-dropdown{ float:right; margin-right:100px; margin-top:33px}
+a:hover{ text-decoration:none;}
+
+.fixed-header thead, .fixed-header tbody, .fixed-header tr, .fixed-header td, .fixed-header th { display: block; }
+.fixed-header tr:after {content: ' '; display: block; visibility: hidden; clear: both;}
+.fixed-header thead th {height: 30px;}
+.fixed-header tbody {height: 300px;overflow-y: auto;}
+.fixed-header tbody td, .fixed-header thead th {width: 19.5%;float: left; box-sizing:padding-box !important; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.fixed-header thead th { width:19.2% !important;}
+
+
+/* Flot Chart Containers */
+
+
+.flot-chart {
+    display: block;
+    height: 400px;
+}
+
+.flot-chart-content {
+    width: 100%;
+    height: 100%;
+}
+
+.jqstooltip{ width:auto !important; height:auto !important;}
+
+/* Edit Below to Customize Widths > 768px */
+@media (min-width:768px) {
+
+    /* Wrappers */
+
+    #wrapper {
+        padding-left: 250px;
+        padding-top:50px;
+    }
+
+    #page-wrapper {
+        padding: 15px 25px;
+    }
+
+    /* Side Nav */
+
+    .side-nav {
+        margin-left: -250px;
+        left: 250px;
+        width: 250px;
+        position: fixed;
+        top: 100px;
+        height: 100%;
+        border-radius: 0;
+        border: none;
+        background-color: #30323f !important;
+        overflow-y: auto;
+    }
+
+    /* Bootstrap Default Overrides - Customized Dropdowns for the Side Nav */
+
+    .side-nav>li.dropdown>ul.dropdown-menu {
+        position: relative;
+        min-width: 225px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a {
+        color: #999999;
+        padding: 15px 15px 15px 25px;
+    }
+
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a:hover,
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a.active,
+    .side-nav>li.dropdown>ul.dropdown-menu>li>a:focus {
+        color: #fff;
+        background-color: #080808;
+    }
+
+    .side-nav>li>a {
+        width: 250px;
+        text-transform:uppercase;
+        font-weight:bold;  -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+    }
+    .side-nav>li>a .fa{ font-size:16px; margin-right:10px;}
+
+    .navbar-inverse .navbar-nav>li>a:hover,
+    .navbar-inverse .navbar-nav>li>a:focus {
+        background-color: #080808;
+    }
+    .navbar .search{float:left; width:428px; margin:34px 0px 0px 25px;}
+    @-moz-document url-prefix() { 
+        .navbar .search{
+            width:427px;
+        }
+    }
+    .navbar .search .btn-group{ float:left;}
+    .navbar .search .btn-group .btn-default{ height:46px;}
+    .navbar .search .btn-group .dropdown-toggle{ border-radius:0px 0px 0px 0px; border-width:1px 0px;}
+    .navbar .search .search-btn{background-color:#428bca; color:#fff; font-size:24px; border:0px;}
+    .navbar .search .input{ width:295px; float:left; height:46px;}
+
+    /* Nav Messages */
+
+    .messages-dropdown .dropdown-menu {
+        min-width: 300px;
+    }
+
+    .messages-dropdown .dropdown-menu li a {
+        white-space: normal;
+    }
+
+    .navbar-collapse {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    /* Background colors */
+    .bg-red,
+    .bg-yellow,
+    .bg-aqua,
+    .bg-blue,
+    .bg-light-blue,
+    .bg-green,
+    .bg-navy,
+    .bg-teal,
+    .bg-olive,
+    .bg-lime,
+    .bg-orange,
+    .bg-fuchsia,
+    .bg-purple,
+    .bg-maroon,
+    .bg-black {
+        color: #f9f9f9 !important;
+    }
+    .bg-gray {
+        background-color: #eaeaec !important;
+    }
+    .bg-black {
+        background-color: #222222 !important;
+    }
+    .bg-red {
+        background-color: #f56954 !important;
+    }
+    .bg-yellow {
+        background-color: #f39c12 !important;
+    }
+    .bg-aqua {
+        background-color: #00c0ef !important;
+    }
+    .bg-blue {
+        background-color: #0073b7 !important;
+    }
+    .bg-light-blue {
+        background-color: #3c8dbc !important;
+    }
+    .bg-green {
+        background-color: #00a65a !important;
+    }
+    .bg-navy {
+        background-color: #001f3f !important;
+    }
+    .bg-teal {
+        background-color: #39cccc !important;
+    }
+    .bg-olive {
+        background-color: #3d9970 !important;
+    }
+    .bg-lime {
+        background-color: #01ff70 !important;
+    }
+    .bg-orange {
+        background-color: #ff851b !important;
+    }
+    .bg-fuchsia {
+        background-color: #f012be !important;
+    }
+    .bg-purple {
+        background-color: #932ab6 !important;
+    }
+    .bg-maroon {
+        background-color: #85144b !important;
+    }
+    /* Text colors */
+    .text-red {
+        color: #f56954 !important;
+    }
+    .text-yellow {
+        color: #f39c12 !important;
+    }
+    .text-aqua {
+        color: #00c0ef !important;
+    }
+    .text-blue {
+        color: #0073b7 !important;
+    }
+    .text-light-blue {
+        color: #3c8dbc !important;
+    }
+    .text-green {
+        color: #00a65a !important;
+    }
+    .text-navy {
+        color: #001f3f !important;
+    }
+    .text-teal {
+        color: #39cccc !important;
+    }
+    .text-olive {
+        color: #3d9970 !important;
+    }
+    .text-lime {
+        color: #01ff70 !important;
+    }
+    .text-orange {
+        color: #ff851b !important;
+    }
+    .text-fuchsia {
+        color: #f012be !important;
+    }
+    .text-purple {
+        color: #932ab6 !important;
+    }
+    .text-maroon {
+        color: #85144b !important;
+    }
+
+}
