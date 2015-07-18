@@ -12,7 +12,7 @@
             <?php
             //Check if valuye is set, if not give default value
             if (isset($title)) {
-                
+
                 echo $title;
             } else {
                 echo 'Keren Danieli';
@@ -55,17 +55,17 @@
         <script src="<?php echo base_url(); ?>JS/modal.js" type="text/javascript"></script>
 
 
-        
+
         <script src="<?php echo base_url(); ?>JS/jquery-ui.js"></script>
         <!-- Bootstrap plugin that turns select elements into bootstrap dropdowns -->
         <script src="<?php echo base_url(); ?>JS/bootstrap-select.js"></script>
         <link href="<?php echo base_url(); ?>css/plugins/bootstrap-select.css" rel="stylesheet">
         <script>
-            window.onerror = function(msg, url, linenumber) {
+            window.onerror = function (msg, url, linenumber) {
                 alert('Error message: ' + msg + '\nURL: ' + url + '\nLine Number: ' + linenumber);
                 return true;
             };
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('select').removeClass('form-control');
                 $('select').removeClass('btn');
                 $('select').removeClass('btn-primary');
@@ -74,17 +74,26 @@
                 $('select').removeClass('btn-success');
                 $('select').addClass('selectpicker');
                 $('select').selectpicker();
-            });
-            
-            
-            <?php 
-                if(isset($Error)){
-                    echo "alert('".$Error."')";
+                
+                <?php if($login!=0){
+                    echo '$("#loginModal").modal("show");';
                 }
                 ?>
+            });
+
+
+<?php
+if (isset($Error)) {
+    echo "alert('" . $Error . "')";
+}
+?>
+    <?php if($login==2){
+        echo "alert('The password is incorrect!')";
+    }
+    ?>
         </script>   
 
-   
+
     </head>
 
 
@@ -95,8 +104,27 @@
 
     <body>
 
-       
-
+        <?php if ($login==1 || $login==2): ?>            
+            <!-- Modal -->
+            <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" >
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Login</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form method="post" action="<?php echo base_url()?>index.php/admin/login">
+                                <input class="form-control" name="password" type="password" placeholder="Password" />
+                                <br/>
+                                <input type="submit" value="Login" class="btn btn-primary">
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        <?php endif; ?>
         <div id="wrapper">
 
             <!-- Sidebar -->
@@ -109,7 +137,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>index.php/home">Keren Danieli</a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>index.php/doctors"><span style="position:relative; top: 25px;left:35px; font-weight: bold">Keren Danieli</span></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -126,21 +154,24 @@
                             echo ' class="active"';
                         }
                         ?>><a href="<?php echo base_url(); ?>index.php/doctors"><i class="fa fa-group"></i> Doctors</a></li>
-                        
+
                     </ul>
-                    
-                    
+
+
                 </div><!-- /.navbar-collapse -->
             </nav>
 
+            <?php if (!$login): ?>
 
-            <div id="page-wrapper">
+                <div id="page-wrapper">
 
-                <?php
+                    <?php
                     $this->load->view(strtolower($passData['Name']) . "/" . $viewPath, $passData);
-                ?>
+                    ?>
 
-            </div>
+                </div>
+
+            <?php endif; ?>
 
         </div>
 

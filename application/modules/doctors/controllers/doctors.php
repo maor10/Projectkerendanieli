@@ -28,7 +28,7 @@ class Doctors extends MX_Controller {
         //$this->load->module('Template');
         //$this->Template->loadView("Home","HomeView",$passdata);
 
-        $module = Modules::load('template');
+        $module = Modules::load('admin');
 
         $module->loadView("Doctors", "doctors_view", $passdata);
     }

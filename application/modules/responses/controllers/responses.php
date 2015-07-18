@@ -28,7 +28,7 @@ class Responses extends MX_Controller {
         //$this->load->module('Template');
         //$this->Template->loadView("Home","HomeView",$passdata);
 
-        $module = Modules::load('template');
+        $module = Modules::load('admin');
 
         $module->loadView("Responses", "responses_view", $passdata);
     }
